@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Authors</title>
+</head>
+<body>
+    <div class= Authors/1>
+        <h1>{{one_author.first_name}} {{one_author.last_name}}</h1>
+        <h3>{{one_author.id}}</h3>
+        <p>{{one_author.notes}}</p>
+         {% for book in one_author.books_by_author.all %}
+         <h4>{{book.title}}</h4>
+         {% endfor %}
+    </div>
+</body>
+</html>
